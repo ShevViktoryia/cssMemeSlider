@@ -1,3 +1,93 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
   background-color: black;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40%;
+  height: 32em;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  transition: height ease-in-out;
+}
+
+.slider_images {
+  display: flex;
+  width: 100%;
+}
+
+.slider_images img{
+  height: 400px;
+  min-width: 100%;
+  transition: all 0.25s ease;
+}
+
+.slider_images input {
+  display: none;
+}
+
+.slide_dots {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+}
+
+.slide_dots label {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: rgb(168, 168, 247);
+  cursor: pointer;
+  margin: 5px;
+  transition: all 0.25s ease;
+}
+
+.slide_dots label:hover {
+  background: white;
+}
+
+.slide_dots label:active {
+  background-color: none;
+  border: 3px solid white;
+}
+
+#slide_dot_1:checked ~ .img1 {
+  margin-left: 0;
+}
+
+#slide_dot_2:checked ~ .img2 {
+  margin-left: -100%;
+}
+
+#slide_dot_3:checked ~ .img3 {
+  margin-left: -200%;
+}
+
+#slide_dot_4:checked ~ .img4 {
+  margin-left: -300%;
+}
+
+#slide_dot_5:checked ~ .img5 {
+  margin-left: -400%;
+}
+
+/* @media screen and (max-width: 765px) {
+  .slider {
+    width: 50%;
+    height: 15em;
+    transition: height ease-in-out;
+  }
+} */
