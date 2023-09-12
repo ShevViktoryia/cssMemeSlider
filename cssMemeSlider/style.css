@@ -39,6 +39,7 @@ img{
 .quote {
   font-size: 17px;
   padding-top: 10px;
+  width: 70%;
 }
 
 .slide {
@@ -56,9 +57,10 @@ img{
 .slide_dots {
   display: flex;
   justify-content: end;
-  position: relative;
+  position: absolute;
   z-index: 10;
-  top: -45px;
+  bottom: 15px;
+  right: 0;
   margin: 5px;
 }
 
@@ -76,17 +78,17 @@ label:hover {
   background: white;
 }
 
-label:active {
-  background-color: none;
-  border: 3px solid white;
-}
-
-input[type="radio"]:checked + .slide_dots label {
+/* input[type="radio"]:checked ~ .slide_dots label {
   background-color:chartreuse;
-}
+} */
 
 #slide_dot_1:checked ~ .slide_1 {
   margin-left: 0;
+}
+
+#slide_dot_1:checked ~ .slide_dots .label_1 {
+  background: none;
+  border: 1px solid white;
 }
 
 #slide_dot_1:not(:checked) ~ .slide_1 .quote_1 {
@@ -97,22 +99,65 @@ input[type="radio"]:checked + .slide_dots label {
   margin-left: -100%;
 }
 
+#slide_dot_2:checked ~ .slide_dots .label_2 {
+  background: none;
+  border: 1px solid white;
+}
+
 #slide_dot_3:checked ~ .slide_3 {
   margin-left: -200%;
+}
+
+#slide_dot_3:checked ~ .slide_dots .label_3 {
+  background: none;
+  border: 1px solid white;
 }
 
 #slide_dot_4:checked ~ .slide_4 {
   margin-left: -300%;
 }
 
+#slide_dot_4:checked ~ .slide_dots .label_4 {
+  background: none;
+  border: 1px solid white;
+}
+
 #slide_dot_5:checked ~ .slide_5 {
   margin-left: -400%;
 }
 
-/* @media screen and (max-width: 765px) {
+#slide_dot_5:checked ~ .slide_dots .label_5 {
+  background: none;
+  border: 1px solid white;
+}
+
+@media screen and (max-width: 1100px) {
   .slider {
-    width: 50%;
-    height: 15em;
-    transition: height ease-in-out;
+    width: 60%;
+    height: auto;
+    transition: width ease-in-out;
   }
-} */
+}
+
+@media screen and (max-width: 780px) {
+  .slider {
+    width: 80%;
+    height: auto;
+    transition: width ease-in-out;
+  }
+
+  .quote {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  img {
+    height: 200px;
+  }
+
+  .slide_dots {
+    bottom: none;
+    top: 215px;
+  }
+}
