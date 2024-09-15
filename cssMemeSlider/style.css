@@ -168,3 +168,12 @@ label:nth-of-type(4):focus-within ~ .slider__text .slider__phrases {
 label:nth-of-type(5):focus-within ~ .slider__text .slider__phrases {
   transform: translateY(-80%);
 }
+
+@media (max-width: 527px) {
+  label {
+    order: 2;
+  }
+  .slider__text {
+    order: 3;
+  }
+}
