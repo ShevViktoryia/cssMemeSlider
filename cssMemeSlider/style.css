@@ -41,7 +41,7 @@ label:active ~ input[type="radio"]:focus {
 input[type="radio"]:focus,
 input[type="radio"]:checked {
   background-color: transparent;
-  border-color: whitesmoke;
+  border-color: rgb(168, 168, 247);
 }
 
 label:hover ~ input[type="radio"]:focus:hover {
@@ -49,8 +49,7 @@ label:hover ~ input[type="radio"]:focus:hover {
   background-color: transparent;
 }
 
-input[type="radio"]:focus:hover,
-input[type="radio"]:focus:active {
+input[type="radio"]:focus:hover {
   border-color: whitesmoke;
   background-color: transparent;
 }
@@ -72,8 +71,7 @@ input[type="radio"] {
   margin-right: 10px !important;
 }
 
-input[type="radio"]:hover,
-input[type="radio"]:active {
+input[type="radio"]:hover {
   cursor: pointer;
   background-color: whitesmoke;
   border-color: whitesmoke;
@@ -152,4 +150,21 @@ label:nth-of-type(5):focus-within ~ .slider-list .slider-item {
   overflow: hidden;
   transform: translateY(0);
   transition: 0.8s;
+}
+
+label:first-of-type:focus-within ~ .slider__text .slider__phrases {
+  transform: translateY(0%);
+}
+
+label:nth-of-type(2):focus-within ~ .slider__text .slider__phrases {
+  transform: translateY(-20%);
+}
+label:nth-of-type(3):focus-within ~ .slider__text .slider__phrases {
+  transform: translateY(-40%);
+}
+label:nth-of-type(4):focus-within ~ .slider__text .slider__phrases {
+  transform: translateY(-60%);
+}
+label:nth-of-type(5):focus-within ~ .slider__text .slider__phrases {
+  transform: translateY(-80%);
 }
