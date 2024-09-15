@@ -34,21 +34,21 @@ label:hover ~ input[type="radio"]:hover {
   border-color: whitesmoke;
 }
 
-label:active ~ input[type="radio"]:checked {
+label:active ~ input[type="radio"]:focus {
   background-color: transparent;
 }
 
-input[type="radio"]:checked {
+input[type="radio"]:focus {
   background-color: transparent;
 }
 
-label:hover ~ input[type="radio"]:checked:hover {
+label:hover ~ input[type="radio"]:focus:hover {
   border-color: whitesmoke;
   background-color: transparent;
 }
 
-input[type="radio"]:checked:hover,
-input[type="radio"]:checked:active {
+input[type="radio"]:focus:hover,
+input[type="radio"]:focus:active {
   border-color: whitesmoke;
   background-color: transparent;
 }
@@ -115,4 +115,24 @@ input[type="radio"]:active {
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
+}
+
+label:first-of-type:focus-within ~ .slider-list .slider-item {
+  transform: translateX(0);
+}
+
+label:nth-of-type(2):focus-within ~ .slider-list .slider-item {
+  transform: translateX(-100%);
+}
+
+label:nth-of-type(3):focus-within ~ .slider-list .slider-item {
+  transform: translateX(-200%);
+}
+
+label:nth-of-type(4):focus-within ~ .slider-list .slider-item {
+  transform: translateX(-300%);
+}
+
+label:nth-of-type(5):focus-within ~ .slider-list .slider-item {
+  transform: translateX(-400%);
 }
